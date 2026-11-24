@@ -1,0 +1,61 @@
+:root{--bg:#eef1f4;--ink:#14213d;--muted:#5b6678;--line:#c9d1dc;--accent:#2b59ff;--tag:#dde4ee;--on-accent:#fff;
+--head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--body:"Newsreader",Georgia,serif}
+:root[data-theme="dark"]{--bg:#101826;--ink:#e8edf5;--muted:#9aa7bb;--line:#2a3750;--accent:#7f9bff;--tag:#1b2740;--on-accent:#101826}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.6 var(--body)}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+main,.top{max-width:960px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+.top{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:1.5rem;padding-block:.9rem;background:var(--bg);max-width:none;border-bottom:1px solid var(--line)}
+.brand{font:800 1.15rem var(--head);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:1.25rem;font:500 1rem var(--head)}
+nav a{text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}
+nav a.active{border-color:var(--accent)}
+.menu-btn{display:none}
+button{font:500 .95rem var(--head);cursor:pointer;color:var(--ink);background:none;border:1px solid var(--line);border-radius:6px;padding:.4rem .8rem}
+button:hover{border-color:var(--accent)}
+.hero{padding:clamp(3rem,10vw,7rem) 0 3rem}
+.role{font:500 1.1rem var(--head);color:var(--muted);margin:0 0 .75rem}
+h1{font:800 clamp(3.2rem,11vw,7.5rem)/.9 var(--head);letter-spacing:-.035em;margin:0 0 1.5rem}
+.lead{max-width:34ch;font-size:1.35rem;margin:0 0 2rem}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;font:500 1rem var(--head);text-decoration:none;border:2px solid var(--ink);border-radius:6px;padding:.6rem 1.1rem;color:var(--ink);background:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{color:var(--on-accent);filter:brightness(1.1)}
+section{padding:3rem 0}
+h2{font:800 1.7rem var(--head);margin:0 0 1.25rem;padding-top:.6rem;border-top:2px solid var(--ink)}
+section p{max-width:62ch}
+.timeline{list-style:none;margin:0;padding:0 0 0 1.5rem;border-left:2px solid var(--line)}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:calc(-1.5rem - 6px);top:.6rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+h3{font:700 1.2rem var(--head);margin:0 0 .25rem}
+.when{color:var(--muted);margin:0 0 .3rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.skills p{margin:0;color:var(--muted)}
+.filters{display:flex;gap:.5rem;margin-bottom:1rem}
+.chip.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.proj{padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.proj[hidden]{display:none}
+.proj p{margin:.25rem 0;color:var(--muted)}
+.proj .stack{font:500 .9rem var(--head)}
+form{display:grid;gap:.4rem;max-width:520px;margin-top:1.5rem}
+label{font:500 1rem var(--head);margin-top:.6rem}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--ink);border-radius:6px;padding:.6rem .75rem;width:100%}
+.err{color:#c62828;font-size:.95rem;min-height:1.2em}
+:root[data-theme="dark"] .err{color:#ff8a80}
+form .btn{justify-self:start;margin-top:.75rem;cursor:pointer}
+#status{margin:.5rem 0 0;color:var(--muted)}
+.links{margin-top:2rem}
+footer{max-width:960px;margin:2rem auto 0;padding:2rem clamp(1.25rem,5vw,3rem);color:var(--muted);font-size:.9rem}
+@media (max-width:720px){
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem clamp(1.25rem,5vw,3rem)}
+  nav.open{display:flex}
+  nav a{padding:.7rem 0}
+  .brand{margin-right:0}
+  .top{justify-content:space-between}
+  .theme-btn{order:3}
+}

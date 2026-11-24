@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikhil Kumar — Portfolio</title>
+<meta name="description" content="Portfolio of Nikhil Kumar, B.Tech CSE student.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#home">Nikhil Kumar</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" aria-label="Switch to dark theme">Dark</button>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <p class="role">B.Tech CSE student · Lucknow, India</p>
+    <h1>Nikhil Kumar</h1>
+    <p class="lead">I’m learning to build fast, readable web apps. This site is where I keep my projects and what I’ve learned.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>I’m a computer science student who likes turning messy problems into simple, working software. I care about clean code, clear documentation and interfaces people can use without a manual.</p>
+    <p>I’m looking for internships where I can work on real products and keep learning.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ol class="timeline">
+      <li>
+        <h3>B.Tech in Computer Science and Engineering (CC + AI)</h3>
+        <p class="when">Shri Ramswaroop Memorial University · 2024 – 2028</p>
+        <p>Add coursework, clubs or achievements here.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Web</h3><p>HTML, CSS, JavaScript</p></div>
+      <div><h3>Languages</h3><p>Python, SQL</p></div>
+      <div><h3>Tools</h3><p>Git, GitHub, VS Code</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="web">Web</button>
+      <button class="chip" data-filter="python">Python</button>
+    </div>
+    <div class="projects" id="projectList">
+      <article class="proj" data-cat="web">
+        <h3>Project one</h3>
+        <p>Describe what it does, who it’s for and what you learned building it.</p>
+        <p class="stack">HTML · CSS · JavaScript</p>
+        <a href="https://github.com/your-nikhi247/project-one">View code</a>
+      </article>
+      <article class="proj" data-cat="web">
+        <h3>Project two</h3>
+        <p>Describe the problem it solves and one result.</p>
+        <p class="stack">HTML · CSS · JavaScript</p>
+        <a href="https://your-nikhi247.github.io/project-two">Live demo</a>
+      </article>
+      <article class="proj" data-cat="python">
+        <h3>Project three</h3>
+        <p>A Python project, such as a script, game or small tool.</p>
+        <p class="stack">Python</p>
+        <a href="https://github.com/your-nikhi247/project-three">View code</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Send me a message and your email app will open with it ready to send. Or write directly to <a href="mailto:nkbestcoool@gmail.com">nkbestcoool@gmail.com</a>.</p>
+    <form id="contactForm" novalidate>
+      <label for="name">Your name</label>
+      <input id="name" name="name" autocomplete="name">
+      <span class="err" data-for="name"></span>
+      <label for="email">Your email</label>
+      <input id="email" name="email" type="email" autocomplete="email">
+      <span class="err" data-for="email"></span>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+      <span class="err" data-for="message"></span>
+      <button class="btn primary" type="submit">Send message</button>
+      <p id="status" role="status"></p>
+    </form>
+    <p class="links"><a href="https://github.com/your-nikhi247">GitHub</a> · <a href="https://www.linkedin.com/in/nikhil-kumar-743658330">LinkedIn</a></p>
+  </section>
+</main>
+
+<footer>© <span id="year">2026</span> Nikhil Kumar</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
